@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Login Interativo</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <!-- Container de Cadastro -->
+        <div class="container a-container" id="a-container">
+            <form id="a-form" class="form" method="post">
+                <h2 class="form__title title">Criar Conta</h2>
+                <div class="form__icons">
+                    <img class="form__icon" src="facebook-icon.svg" alt="Facebook">
+                    <img class="form__icon" src="linkedin-icon.svg" alt="LinkedIn">
+                    <img class="form__icon" src="twitter-icon.svg" alt="Twitter">
+                </div>
+                <span class="form__span">ou use email para registro</span>
+                <input class="form__input" type="text" placeholder="Nome" required>
+                <input class="form__input" type="email" placeholder="Email" required>
+                <input class="form__input" type="password" placeholder="Senha" required minlength="6">
+                <button class="form__button button submit">CADASTRAR</button>
+            </form>
+        </div>
+        
+        <!-- Container de Login -->
+        <div class="container b-container" id="b-container">
+            <form id="b-form" class="form" method="post">
+                <h2 class="form__title title">Entrar</h2>
+                <div class="form__icons">
+                    <img class="form__icon" src="facebook-icon.svg" alt="Facebook">
+                    <img class="form__icon" src="linkedin-icon.svg" alt="LinkedIn">
+                    <img class="form__icon" src="twitter-icon.svg" alt="Twitter">
+                </div>
+                <span class="form__span">ou use sua conta de email</span>
+                <input class="form__input" type="email" placeholder="Email" required>
+                <input class="form__input" type="password" placeholder="Senha" required>
+                <a class="form__link recovery-link">Esqueceu sua senha?</a>
+                <button class="form__button button submit">ENTRAR</button>
+            </form>
+        </div>
+        
+        <!-- Container de Recuperação de Senha (novo) -->
+        <div class="container r-container" id="r-container">
+            <form id="r-form" class="form" method="post">
+                <h2 class="form__title title">Recuperar Senha</h2>
+                <p class="form__description">Digite seu email para receber o link de recuperação</p>
+                <input class="form__input" type="email" placeholder="Seu email" required>
+                <button class="form__button button submit">ENVIAR LINK</button>
+                <a class="form__link back-to-login">Voltar para o Login</a>
+            </form>
+        </div>
+        
+        <!-- Painel de Alternância (Switch) -->
+        <div class="switch" id="switch-cnt">
+            <div class="switch__circle"></div>
+            <div class="switch__circle switch__circle--t"></div>
+            
+            <div class="switch__container" id="switch-c1">
+                <h2 class="switch__title title">Bem-vindo de volta!</h2>
+                <p class="switch__description description">Mantenha-se conectado fazendo login com suas informações pessoais</p>
+                <button class="switch__button button switch-btn">ENTRAR</button>
+            </div>
+            
+            <div class="switch__container is-hidden" id="switch-c2">
+                <h2 class="switch__title title">Olá, Amigo!</h2>
+                <p class="switch__description description">Insira seus dados pessoais e comece sua jornada conosco</p>
+                <button class="switch__button button switch-btn">CADASTRAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
